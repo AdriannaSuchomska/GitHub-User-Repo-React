@@ -1,0 +1,105 @@
+@import "./colors.scss";
+
+
+div.user-profile{
+    margin: 30px;
+    display: flex;
+    flex-direction:row ; 
+    justify-content: space-around;
+    background: $user-card-color;
+    margin-top: 60px;; 
+    box-shadow: inset 0 0 1em $boxshadow-blue, 0 0 1em $boxshadow-green;
+    width: 80%;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+div.profile-user-settings {
+    margin-top: 20px;
+    width: 30%;
+}
+
+
+h1.user-name{
+    color: $text-color;
+    font-size: 25px;
+    text-align: center;    
+    word-wrap: break-word;
+}
+
+h1.user-name-long{
+    color: $text-color;
+    font-size: 16px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+
+
+div.user-img {
+    display: flex;
+    justify-content: center;
+    
+}
+
+img.user-img{ 
+    width: 152px;
+    height: 152px;
+    border-radius: 50%;
+}
+
+
+@media only screen and (max-width: 650px) {
+
+
+    div.user-profile{
+        flex-direction: column;
+       }
+
+    div.profile-user-settings {
+        display: flex;
+        flex-direction:row ; 
+        align-items: center;
+        margin-top: 20px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h1.user-name{
+        padding-left: 10px;
+        word-wrap: break-word;
+    }
+    h1.user-name-long{
+        padding-left: 10px;
+        word-wrap: break-word;
+    }
+   
+    
+    img.user-img {
+        width: 102px;
+        height: 102px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+
+    h1.user-name{
+        padding: 0px;
+    
+    }
+
+    h1.user-name-long{
+        padding: 0px;
+    }
+
+    div.profile-user-settings {
+        display: flex;
+        flex-direction:column ; 
+        align-items: center;
+    }
+
+
+}
+
+

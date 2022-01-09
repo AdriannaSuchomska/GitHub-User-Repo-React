@@ -1,0 +1,84 @@
+@import "./colors.scss";
+
+
+$t: 1s;
+$d: 0.06em;
+$n: 3;
+$e: cubic-bezier(0.860, 0.000, 0.070, 1.000); 
+$front: $text-color;
+$back: rgba(56, 138, 253, 0.384);
+
+#header{
+	width: 100%;
+	height: 20vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: linear-gradient(180deg, rgb(13, 17, 23, 0), $user-card-color),linear-gradient(70deg, $boxshadow-blue 32%, $boxshadow-green);
+	border-bottom: 1px solid $main-color;
+  } 
+
+.popout{
+	font-family: Futura, sans-serif;
+	font-weight: 900;
+	font-size: 60px;
+	padding: 0;
+	margin: 0;
+
+	@keyframes ani{
+		0%{
+			transform: translate3d(0,0,0);
+			text-shadow: 0em 0em 0 $back;
+			color: $front;
+		}
+		30%{
+			transform: translate3d(0,0,0);
+			text-shadow: 0em 0em 0 $back;
+			color: $front;
+		}
+		70%{
+			transform: translate3d($d,-$d,0);
+			text-shadow: -$d $d $back;
+			color: $front;
+		}
+		100%{
+			transform: translate3d($d,-$d,0);
+			text-shadow: -$d $d $back;
+			color: $front;
+		}
+	}
+	span{
+		position: relative;
+		display: inline-block;
+		animation: ani $t infinite alternate $e;
+		@for $i from 1 through $n{
+			&:nth-last-child(#{$i}n){ animation-delay: -$t*$i/$n/2;}
+		}
+	}
+	
+}
+
+@media only screen and (max-width: 650px) {
+
+	#header{
+		height: 22vh;
+	  }
+	.popout{
+		font-size: 50px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+}
+
+@media only screen and (max-width: 450px) {
+	#header{
+		height: 25vh;
+	  }
+    .popout{
+		font-size: 35px;
+	}
+
+}
+

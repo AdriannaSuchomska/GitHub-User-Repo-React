@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Nazwa i prezentacja projektu:
+    GitHub User Repo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    Jest to aplikacja typu React-Github, która umożliwia wyszukiwanie dowolnego użytkownika serwisu GitHub i przeglądanie jego repozytoriów.
 
-## Available Scripts
 
-In the project directory, you can run:
+# Instrukcje instalacji i konfiguracji
 
-### `npm start`
+    Pierwsze kroki
+    Najpierw należy sklonować repozytorium
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    $ git clone https://github.com/AdriannaSuchomska/GitHub-User-Repo-React.git
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    Instalacja:
+    npm install
 
-### `npm test`
+    Aby uruchomić serwer:
+    npm start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    Aby odwiedzić aplikację:
+    localhost:3000/ideas
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Opis aplikacji:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    Każdą nową aplikację traktuję jako możliwość rozwoju, dlatego zdecydowałam się  na użycie create-react-app, aby zminimalizować początkową konfigurację i poświęcić więcej czasu na jak najlepsze dopracowanie aplikacji, zarówno od strony wizualnej jak i funkcjonalnej.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    Aplikacja pozwala użytkownikowi wpisać dowolną nazwę użytkownika serwisu GitHub, zatwierdzenie wpisanej nazwy użytkownika może odbyć się zarówno poprzez kliknięcie buttona jak i klawisza ‘Enter’ na klawiaturze.
 
-### `npm run eject`
+    Wysyłania żądań  HTTP i obsługi ich odpowiedzi odbywa się za pomocą biblioteki Axios, będącej alternatywą dla dla natywnej funkcji JavaScript .fetch().
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    W rezultacie aplikacja wyświetla login wyszukanego użytkownika, jego avatar oraz posortowaną listę repozytoriów pobrane z GitHub API.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    W celu wyświetlenia oraz posortowania po popularności repozytoriów zastosowałam metodę .map() oraz .sort(). Poszczególne repozytoria wyświetlone zostają jako hiperłącza, po kliknięciu w dane hiperłącze zostanie otwarta w przeglądarce nowa karta serwisu GitHub na której znajduje się dane repozytorium. Wyświetlone linki zostaną przedstawione w aplikacji ze zmienionym  kolorem.  
+    Aby aplikacja wyświetliła login oraz avatar użytkownika użyłam metody map () oraz slice(). 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    W celu ułatwienia sobie tworzenia wizualnej strony aplikacji, zdecydowałam się na wykorzystanie preprocesora CSS-a - SASS. 
+    Aplikacja jest w pełni responsywna dzięki wykorzystaniu Media Queries.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
